@@ -1,0 +1,33 @@
+{
+  "name": "obj-type",
+  "version": "0.0.0",
+  "description": "Returns any kind of object's type.",
+  "license": "MIT",
+  "repository": "gillstrom/obj-type",
+  "author": {
+    "email": "andreasgillstrom@gmail.com",
+    "name": "Andreas Gillström",
+    "url": "github.com/gillstrom"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "check",
+    "is",
+    "obj",
+    "object",
+    "test",
+    "type",
+    "typeof"
+  ],
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
