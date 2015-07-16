@@ -1,6 +1,6 @@
 {
   "name": "obj-type",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Returns any kind of object's type.",
   "license": "MIT",
   "repository": "gillstrom/obj-type",
