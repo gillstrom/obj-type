@@ -7,7 +7,6 @@ it('Should return array', function () {
 	assert.strictEqual(objType([{foo: 'bar'}]), 'array');
 	assert.strictEqual(objType([]), 'array');
 	assert.strictEqual(objType(new Array()), 'array');
-
 });
 
 it('Should return object', function () {
