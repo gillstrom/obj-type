@@ -1,33 +1,32 @@
-'use strict';
-var assert = require('assert');
-var objType = require('./');
+import test from 'ava';
+import m from './';
 
-it('Should return array', function () {
-	assert.strictEqual(objType(['foo', 'bar']), 'array');
-	assert.strictEqual(objType([{foo: 'bar'}]), 'array');
-	assert.strictEqual(objType([]), 'array');
-	assert.strictEqual(objType(new Array()), 'array');
+test('Should return array', t => {
+	t.is(m(['foo', 'bar']), 'array');
+	t.is(m([{foo: 'bar'}]), 'array');
+	t.is(m([]), 'array');
+	t.is(m(new Array()), 'array');
 });
 
-it('Should return object', function () {
-	assert.strictEqual(objType({foo: 'bar'}), 'object');
-	assert.strictEqual(objType({}), 'object');
-	assert.strictEqual(objType(new Object()), 'object');
-	assert.strictEqual(objType(Object.create(null)), 'object');
+test('Should return object', t => {
+	t.is(m({foo: 'bar'}), 'object');
+	t.is(m({}), 'object');
+	t.is(m(new Object()), 'object');
+	t.is(m(Object.create(null)), 'object');
 });
 
-it('Should return null', function () {
-	assert.strictEqual(objType(null), 'null');
+test('Should return null', t => {
+	t.is(m(null), 'null');
 });
 
-it('Should return regexp', function () {
-	assert.strictEqual(objType(/foo/), 'regexp');
+test('Should return regexp', t => {
+	t.is(m(/foo/), 'regexp');
 });
 
-it('Should return date', function () {
-	assert.strictEqual(objType(new Date()), 'date');
+test('Should return date', t => {
+	t.is(m(new Date()), 'date');
 });
 
-it('Should return error', function () {
-	assert.strictEqual(objType(new Error()), 'error');
+test('Should return error', t => {
+	t.is(m(new Error()), 'error');
 });
