@@ -9,10 +9,12 @@ test('Should return array', t => {
 });
 
 test('Should return object', t => {
+	const obj = new Object();
+
 	t.is(m({foo: 'bar'}), 'object');
 	t.is(m({}), 'object');
-	t.is(m(new Object()), 'object');
 	t.is(m(Object.create(null)), 'object');
+	t.is(m(obj), 'object');
 });
 
 test('Should return null', t => {
