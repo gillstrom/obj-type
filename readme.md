@@ -15,7 +15,7 @@ $ npm install --save obj-type
 ## Usage
 
 ```js
-var objType = require('obj-type');
+const objType = require('obj-type');
 
 objType({foo: 'bar'});
 //=> 'object'
